@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
     // Run the system `fortune` command and respond with the message
     child_process.exec('fortune', (error, message) => {
         if(error === null) {
-            res.send(message);
+            // <br> to separate date from message in HTML through res.send
+            res.send(`${Date()} <br> ${message}`);
         } else {
             res.send('Error: ' + error);
         }
