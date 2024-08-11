@@ -1,6 +1,7 @@
 Without Docker compose:
 
 docker build --tag=fortune-cookie .
+
 docker run --rm -it -p 80:3000 fortune-cookie
 
 - Allows the usage of `localhost` in web browser without specifying port,
