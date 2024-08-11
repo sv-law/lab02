@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     child_process.exec('fortune', (error, message) => {
         if(error === null) {
             // <br> to separate date from message in HTML through res.send
-            res.send(`${Date()} <br> ${message}`);
+            res.send(`${Date()} <br> Your fortune is: ${message}`);
         } else {
             res.send('Error: ' + error);
         }
